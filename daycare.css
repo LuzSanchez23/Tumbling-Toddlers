@@ -11,7 +11,7 @@ nav {
 .carousel-item {
     height: 30rem;
     background-color:#0000 ;
-    border: 10px solid transparent;
+
 }
 body {
     font-family: 'Butterfly Kids', cursive;
@@ -19,6 +19,8 @@ body {
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 800;
+    text-align: center;
 }
 h2 {
     font-size: 20px;
