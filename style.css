@@ -1,7 +1,11 @@
 body {
     background-color: #c55dd3;
 }
-
+.error {
+  font-size: 15px;
+  color: greenyellow;
+  font-weight: bold;
+}
 form {
     background-color: white;
     max-width: 580px;
