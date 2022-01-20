@@ -67,56 +67,30 @@ function validateForm() {
         printError("countryErr", " ");
         countryErr = false;
     }
-     // Validate gender
-     if (gender == " ") {
-        printError("genderErr", "Please Make a Selection");
+    //validate gender
+    if (gender == " ") {
+        printError("genderErr", "Please select your gender");
     } else {
         printError("genderErr", " ");
         genderErr = false;
     }
-    // Prevent the form from being submitted if there are any errors
-    if ((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+    //Prevent the form from being submitted if there are any errors
+    if ((nameErr || emailErr ||mobileErr || countryErr || genderErr) == true) { //las barras se ignica "or"
         return false;
     } else {
-        // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-            "Full Name: " + name + "\n" +
-            "Email Address: " + email + "\n" +
-            "Mobile Number: " + mobile + "\n" +
-            "Country: " + country + "\n" +
-            "Gender: " + gender + "\n";
-        if (hobbies.length) {
-            dataPreview += "Hobbies: " + hobbies.join(", ");
-        }
-        // Display input data in a dialog box before submitting the form
-        alert(dataPreview);
+       // Creating a string from input data for preview
+       var dataPreview = "You've entered the following details: \n" +
+       "Full Name: " + name + "\n" +
+       "Email Address: " + email + "\n" +
+       "Mobile Number: " + mobile + "\n" +
+       "Country: " + country + "\n" +
+       "Gender: " + gender + "\n";
+   if (hobbies.length) {
+       dataPreview += "Hobbies: " + hobbies.join(", ");
+   }
+   // Display input data in a dialog box before submitting the form
+  alert(dataPreview);
     }
+
 };
-
-//     //validate gender
-//     if (gender == " ") {
-//         printError("genderErr", "Please select your gender");
-//     } else {
-//         printError("genderErr", " ");
-//         countryErr = false;
-//     }
-//     //Prevent the form from being submitted if there are any errors
-//     if ((nameErr || emailErr ||mobileErr || countryErr || genderErr) == true) { //las barras se ignica "or"
-//         return false;
-//     } else {
-//        // Creating a string from input data for preview
-//        var dataPreview = "You've entered the following details: \n" +
-//        "Full Name: " + name + "\n" +
-//        "Email Address: " + email + "\n" +
-//        "Mobile Number: " + mobile + "\n" +
-//        "Country: " + country + "\n" +
-//        "Gender: " + gender + "\n";
-//    if (hobbies.length) {
-//        dataPreview += "Hobbies: " + hobbies.join(", ");
-//    }
-//    // Display input data in a dialog box before submitting the form
-//   alert(dataPreview);
-//     }
-
-// };
 
