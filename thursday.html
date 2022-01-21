@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>Mad Libs</h1>
+
+    <ul>
+        <li>Noun: <input type="text" id="noun">
+        <li>Adjective: <input type="text" id="adjective">
+        <li>Someone's Name: <input type="text" id="person">
+    </ul>
+
+    <button id="lib-button">Lib it!</button>
+
+    <div id="story"></div>
+
+    <!--Exercise
+    Add a script tag to the bottom of the page for your code. El codigo que esta dentro del script
+    Add an event listener to the button so that it calls a makeMadLib function when clicked.
+    In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output
+    that in the story div (like "Pamela really likes pink cucumbers.")-->
+
+    <!--Sebastian Code
+    var button = document.getElementById('lib-button');
+var onClickEvent = function(){
+var noun = document.getElementById('noun').value;
+var adjective = document.getElementById('adjective').value;
+var name = document.getElementById('person').value;
+var story = document.createTextNode(`${name}, married a ${adjective}, they like to ${noun}`);
+var storyp = document.getElementById('story');
+storyp.appendChild(story);
+}
+button.addEventListener('click', onClickEvent);
+-->
+
+<!--Chris code
+    var makeMadLib = function() {
+    var noun = document.getElementById(`noun`).value
+    var adjective = document.getElementById(`adjective`).value
+    var name = document.getElementById(`person`).value
+    document.getElementById(`story`).innerHTML = `Hi ` + noun  + adjective + name
+}
+// var libButton = document.getElementById(`lib-button`)
+// libButton.addEventListener(`click`, makeMadLib)
+-->
+    <script>
+        function libit() {
+            var storyDiv = document.getElementById("story");
+            var person = document.getElementById("person").value;
+            var adjective = document.getElementById("adjective").value;
+            var noun = document.getElementById("noun").value;
+            storyDiv.innerHTML = (`${person} is married ${adjective} ${noun} so weird!`) //template literal example 1
+            storyDiv.innerHTML = (`${person} really likes ${adjective} ${noun}!`) //template literal Exmaple 2
+        }
+
+        var litButton = document.getElementById('lib-button');
+        litButton.addEventListener('click', libit);
+
+    </script>
+</body>
+
+</html>
